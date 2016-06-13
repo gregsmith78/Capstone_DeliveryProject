@@ -68,7 +68,7 @@ namespace CapstoneDeliveryService.Controllers
                 venIds.Add(y.LocuVenueId);
                 VenueDetailsRequest vdr = new VenueDetailsRequest(key, venIds);
                 var result2 = await vdc.SendAsync(vdr);
-               // List<VenueDetailResponseObject> results2 =
+
                foreach(VenueDetailsResponse response in result2 )
                {
                    List<VenueDetailResponseObject>vdrsp = response.Venues.ToList();
