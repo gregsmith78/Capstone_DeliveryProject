@@ -13,6 +13,7 @@ namespace CapstoneDeliveryService.Controllers
     public class MenuItemsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+      
 
         // GET: MenuItems
         public ActionResult Index()
@@ -123,5 +124,17 @@ namespace CapstoneDeliveryService.Controllers
             }
             base.Dispose(disposing);
         }
+        //public ActionResult Index(string searchString)
+        //{
+        //    var foodItem = from m in db.MenuItems
+        //                   select m;
+
+        //    if (!String.IsNullOrEmpty(searchString))
+        //    {
+        //        foodItem = foodItem.Where(s => s.Name.Contains(searchString));
+        //    }
+
+        //    return View(foodItem);
+        //}
     }
 }
